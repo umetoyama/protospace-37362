@@ -14,7 +14,7 @@
       <% end %>
       <%# // プロトタイプの投稿者とログインしているユーザーが同じであれば上記を表示する %>
       <div class="prototype__image">
-        <%= image_tag @prototype.image %>
+        <%= image_tag @prototype.image %> 
       </div>
       <div class="prototype__body">
         <div class="prototype__detail">
@@ -49,7 +49,7 @@
           <% @comments.each do |comment| %>
             <li class="comments_list">
               <%= comment.content %>
-              <%= link_to comment.user.name, "/users/#{comment.id}", class: :comment_user %>
+              <%= link_to comment.user.name, "/users/#{comment.user_id}", class: :comment_user %>
             </li>
           <% end %>
           <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
